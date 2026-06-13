@@ -1,0 +1,305 @@
+/* ====================================
+   CONFIGURAÇÕES GERAIS E CORES (Estética Floresta)
+   ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e29; /* Verde bem escuro, quase preto, para melhor leitura */
+    background-color: #f4f7f2; /* Fundo creme/verde-oliva bem suave, lembrando papel reciclado ou névoa da manhã */
+    scroll-behavior: smooth; /* Deixa o deslize da página suave ao clicar no menu */
+}
+
+/* Títulos com um tom de floresta forte */
+h1, h2, h3 {
+    color: #1e3d23; /* Verde floresta profundo */
+    font-weight: 700;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Botões Estilo Natureza */
+.btn {
+    display: inline-block;
+    background-color: #2e7d32; /* Verde folha vivo */
+    color: #ffffff !important;
+    padding: 12px 28px;
+    border-radius: 30px; /* Bordas arredondadas que lembram formas da natureza */
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #1b5e20; /* Verde mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+/* ====================================
+   CABEÇALHO (Menu de Navegação)
+   ==================================== */
+header {
+    background-color: rgba(30, 61, 35, 0.95); /* Verde escuro com leve transparência */
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: #a5d6a7; /* Verde claro brilhante para a logo */
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li a:hover {
+    color: #81c784;
+}
+
+/* ====================================
+   SEÇÃO HERO (Banner Inicial)
+   ==================================== */
+.hero {
+    /* Gradiente que simula a luz do sol entrando pela copa de uma floresta */
+    background: linear-gradient(rgba(18, 38, 22, 0.75), rgba(46, 125, 50, 0.5)), 
+                url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ====================================
+   SEÇÕES DE CONTEÚDO
+   ==================================== */
+.conteudo-sec {
+    padding: 60px 12%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.conteudo-sec h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Linha decorativa embaixo dos títulos que lembra um raminho/broto */
+.conteudo-sec h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #81c784;
+    border-radius: 2px;
+}
+
+#introducao p {
+    font-size: 17px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #3e5c3b;
+}
+
+/* ====================================
+   CARDS (Seção de Tecnologias)
+   ==================================== */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Garante que funcione bem no celular */
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+    min-width: 280px;
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.05);
+    border-top: 5px solid #4caf50; /* Detalhe verde no topo do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(46, 125, 50, 0.12);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* ====================================
+   LISTAS (Alternativas Biológicas)
+   ==================================== */
+#alternativas {
+    background-color: #e8f5e9; /* Fundo verde bem clarinho para destacar a seção */
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#alternativas ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+}
+
+#alternativas ul li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 30px;
+    font-size: 16px;
+}
+
+/* Ícone personalizado antes de cada item da lista (simula uma folhinha verde) */
+#alternativas ul li::before {
+    content: '🍃'; 
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+/* ====================================
+   TABELA COMPARATIVA
+   ==================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #2e7d32;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fbf9; /* Efeito zebrado suave nas linhas */
+}
+
+tr:hover {
+    background-color: #f1f8e9; /* Destaca a linha que o usuário está olhando */
+}
+
+/* ====================================
+   RODAPÉ E FORMULÁRIO (Contato)
+   ==================================== */
+footer {
+    background-color: #1b4322; /* Marrom terra escuro ou verde raízes */
+    color: #e8f5e9;
+    padding: 60px 12% 20px 12%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contato-form {
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    text-align: center;
+}
+
+.contato-form h3 {
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* Campos do formulário */
+form input, form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 2px solid #3e6b43;
+    background-color: #24542a;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Altera a cor do texto de exemplo (placeholder) */
+form input::placeholder, form textarea::placeholder {
+    color: #a5d6a7;
+    opacity: 0.7;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #81c784; /* Brilha ao clicar */
+    background-color: #2a5f31;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.creditos {
+    text-align: center;
+    border-top: 1px solid #2e5c35;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #a5d6a7;
+}
